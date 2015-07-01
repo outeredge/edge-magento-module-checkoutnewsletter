@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.billing">
+            <reference name="form.additional.info">
+                <block type="core/template" name="checkoutnewsletter.subscribe" template="edge/checkoutnewsletter/checkbox.phtml"/>
+            </reference>
+        </reference>
+    </checkout_onepage_index>
+</layout>

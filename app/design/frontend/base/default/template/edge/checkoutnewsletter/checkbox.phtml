@@ -1,0 +1,5 @@
+<?php if (!Mage::getSingleton('customer/session')->isLoggedIn() && Mage::getStoreConfigFlag('checkout/options/newsletter_subscription')): ?>
+<li class="control">
+    <input type="checkbox" name="subscribe_to_newsletter" id="billing:subscribe_to_newsletter" value="1" title="<?php echo $this->__('Subscribe to our newsletter') ?>" class="checkbox"<?php if (!Mage::getStoreConfigFlag('checkout/options/newsletter_subscription_unchecked')): ?> checked="checked"<?php endif; ?>><label for="billing:subscribe_to_newsletter"><?php echo $this->__('Subscribe to our newsletter') ?></label>
+</li>
+<?php endif; ?>

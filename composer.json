@@ -1,0 +1,23 @@
+{
+    "name": "outeredge/edge-magento-module-checkoutnewsletter",
+    "type": "magento-module",
+    "description": "Checkout Newsletter Subscription Module for Magento by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "support@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/Edge/CheckoutNewsletter", "app/code/local/Edge/CheckoutNewsletter"],
+            ["app/etc/modules/Edge_CheckoutNewsletter.xml", "app/etc/modules/Edge_CheckoutNewsletter.xml"],
+            ["app/design/frontend/base/default/layout/edge/checkoutnewsletter.xml", "app/design/frontend/base/default/layout/edge/checkoutnewsletter.xml"],
+            ["app/design/frontend/base/default/template/edge/checkoutnewsletter", "app/design/frontend/base/default/template/edge/checkoutnewsletter"]
+        ]
+    }
+}

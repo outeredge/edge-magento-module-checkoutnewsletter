@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Edge_CheckoutNewsletter>
+            <version>1.0.0</version>
+        </Edge_CheckoutNewsletter>
+    </modules>
+    <global>
+        <events>
+            <controller_action_postdispatch_checkout_onepage_saveBilling>
+                <observers>
+                    <edge_checkout_newsletter_saveBilling>
+                        <type>singleton</type>
+                        <class>Edge_CheckoutNewsletter_Model_Newsletter</class>
+                        <method>setSubscribeToNewsletterStatus</method>
+                    </edge_checkout_newsletter_saveBilling>
+                </observers>
+            </controller_action_postdispatch_checkout_onepage_saveBilling>
+            <checkout_submit_all_after>
+                <observers>
+                    <edge_checkout_newsletter_subscribe>
+                        <type>singleton</type>
+                        <class>Edge_CheckoutNewsletter_Model_Newsletter</class>
+                        <method>subscribeToNewsletter</method>
+                    </edge_checkout_newsletter_subscribe>
+                </observers>
+            </checkout_submit_all_after>
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <checkoutnewsletter>
+                    <file>edge/checkoutnewsletter.xml</file>
+                </checkoutnewsletter>
+            </updates>
+        </layout>
+    </frontend>
+</config>
