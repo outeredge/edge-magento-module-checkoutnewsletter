@@ -17,9 +17,13 @@
                 </observers>
             </controller_action_postdispatch_checkout_onepage_saveBilling>
             <checkout_onepage_controller_success_action>
-                <type>singleton</type>
-                <class>Edge_CheckoutNewsletter_Model_Newsletter</class>
-                <method>subscribeToNewsletter</method>
+                <observers>
+                    <edge_checkout_newsletter_subscribe>
+                        <type>singleton</type>
+                        <class>Edge_CheckoutNewsletter_Model_Newsletter</class>
+                        <method>subscribeToNewsletter</method>
+                    </edge_checkout_newsletter_subscribe>
+                </observers>
             </checkout_onepage_controller_success_action>
         </events>
         <resources>
